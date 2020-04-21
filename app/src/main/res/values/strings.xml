@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Mascotas</string>
+    <string name="rate">#Rate</string>
+    <string name="nombre">Nombre Mascota</string>
+    <string name="tituloapp" >Petagram</string>
+</resources>
