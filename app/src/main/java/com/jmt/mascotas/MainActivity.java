@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -29,6 +30,13 @@ public class MainActivity extends AppCompatActivity  {
         iniciarAdaptador();
        // addFab();
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu pepe) {
+        getMenuInflater().inflate(R.menu.menu_opciones, pepe);
+        return true;
+    }
+
     public void ListaDeMascota() {
         mascota = new ArrayList<Mascota>();
         mascota.add(new Mascota("Lola","2",R.drawable.mascota1));

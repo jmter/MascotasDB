@@ -1,6 +1,7 @@
 package com.jmt.mascotas;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -21,7 +22,10 @@ public class MascotasFavoritas extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mascotas_favoritas);
-        atras();
+        Toolbar miActionBar = (Toolbar) findViewById(R.id.miToolbar);
+        setSupportActionBar(miActionBar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         ListaDeMascota();
         listaMascotas = (RecyclerView) findViewById(R.id.recycler2);
         LinearLayoutManager llm = new LinearLayoutManager(this);
@@ -29,20 +33,8 @@ public class MascotasFavoritas extends AppCompatActivity {
         iniciarAdaptador();
 
     }
-    public void atras(){
-        back = (ImageView) findViewById(R.id.back);
-        fav = (ImageView) findViewById(R.id.favoritos);
-        fav.setImageResource(0);
-        back.setImageResource(R.drawable.back);
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getBaseContext(),MainActivity.class);
-                startActivity(intent);
 
-            }
-        });
-    }
+
     public void ListaDeMascota() {
         mascota = new ArrayList<Mascota>();
 

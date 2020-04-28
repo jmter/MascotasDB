@@ -3,4 +3,6 @@
     <string name="rate">#Rate</string>
     <string name="nombre">Nombre Mascota</string>
     <string name="tituloapp" >Petagram</string>
+    <string name="menu1">Contacto</string>
+    <string name="menu2">About</string>
 </resources>
