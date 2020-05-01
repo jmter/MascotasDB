@@ -11,8 +11,8 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <include android:id="@+id/miToolbar"
-            layout="@layout/toolbar"/>
+        <include android:id="@+id/mitoolbarini"
+            layout="@layout/toolbarinicio"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler"

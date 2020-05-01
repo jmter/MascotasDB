@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/action_contacto"
+        android:title="@string/menu1"
+        app:showAsAction="collapseActionView"
+        android:orderInCategory="100"/>
+
+    <item android:id="@+id/action_acerca"
+        android:title="@string/menu2"
+        app:showAsAction="collapseActionView"
+        android:orderInCategory="1001"/>
+
+</menu>

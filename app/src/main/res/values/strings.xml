@@ -2,7 +2,14 @@
     <string name="app_name">Mascotas</string>
     <string name="rate">#Rate</string>
     <string name="nombre">Nombre Mascota</string>
-    <string name="tituloapp" >Petagram</string>
+    <string name="tituloapp">Petagram</string>
     <string name="menu1">Contacto</string>
     <string name="menu2">About</string>
+    <string name="nombrecomp">Nombre Completo</string>
+    <string name="email">E-mail</string>
+    <string name="contenido">Mensaje</string>
+    <string name="send">Enviar comentario</string>
+    <string name="desarollador"> Nombre del desarollador: Juan Manuel Terra</string>
+    <string name="version">Version de la aplicacion: 1.1</string>
+    <string name="correo"> Correo de contacto: juanmanuel@gmail.com</string>
 </resources>

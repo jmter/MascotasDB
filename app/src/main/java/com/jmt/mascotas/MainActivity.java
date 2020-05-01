@@ -1,6 +1,7 @@
 package com.jmt.mascotas;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -8,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -28,16 +30,32 @@ public class MainActivity extends AppCompatActivity  {
         LinearLayoutManager llm = new LinearLayoutManager(this);
         listaMascotas.setLayoutManager(llm);
         iniciarAdaptador();
-       // addFab();
+        toolbar();
+        addFab();
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu pepe) {
-        getMenuInflater().inflate(R.menu.menu_opciones, pepe);
-        return true;
+    public void toolbar() {
+    Toolbar mitoolbar = findViewById(R.id.mitoolbarini);
+    mitoolbar.inflateMenu(R.menu.menu_opciones);
+    mitoolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+        @Override
+        public boolean onMenuItemClick(MenuItem item) {
+            switch (item.getItemId()){
+                case R.id.action_contacto:
+                    Intent intent1 = new Intent(getBaseContext(),Contacto.class);
+                    startActivity(intent1);
+                    break;
+                case R.id.action_acerca:
+                    Intent intent2 = new Intent(getBaseContext(),Acercade.class);
+                    startActivity(intent2);
+                    break;
+            }
+            return true;
+        }
+    });
     }
 
-    public void ListaDeMascota() {
+        public void ListaDeMascota() {
         mascota = new ArrayList<Mascota>();
         mascota.add(new Mascota("Lola","2",R.drawable.mascota1));
         mascota.add(new Mascota("Pepe","8",R.drawable.mascota2));
