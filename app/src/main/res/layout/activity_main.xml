@@ -4,30 +4,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MascotasFavoritas">
+    tools:context=".Activities.MascotasFavoritas">
 
-    <LinearLayout
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme">
         <include android:id="@+id/mitoolbarini"
             layout="@layout/toolbarinicio"/>
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler"
+        <com.google.android.material.tabs.TabLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:id="@+id/tabs">
+        </com.google.android.material.tabs.TabLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    </androidx.viewpager.widget.ViewPager>
+
+
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/floatingActionButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="right"
+            android:layout_gravity="right|bottom"
             android:layout_marginRight="20dp"
-            android:clickable="true" />
+            android:layout_marginBottom="30dp"
+            android:clickable="true"
+            android:src="@drawable/fab48"/>
 
-    </LinearLayout>
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

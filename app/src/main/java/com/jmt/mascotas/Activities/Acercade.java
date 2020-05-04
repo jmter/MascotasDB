@@ -1,10 +1,12 @@
-package com.jmt.mascotas;
+package com.jmt.mascotas.Activities;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
+
+import com.jmt.mascotas.R;
 
 public class Acercade extends AppCompatActivity {
 

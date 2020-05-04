@@ -1,13 +1,16 @@
-package com.jmt.mascotas;
+package com.jmt.mascotas.POJO;
 
 public class Mascota {
 
-
+    private int id;
     private String nombre;
     private String raiting;
     private int foto;
 
-    public Mascota(String nombre, String raiting, int foto){
+    public Mascota(){
+    }
+    public Mascota(int id, String nombre, String raiting, int foto){
+        this.id = id;
         this.nombre = nombre;
         this.raiting = raiting;
         this.foto = foto;
@@ -34,5 +37,13 @@ public class Mascota {
 
     public void setFoto(int foto) {
         this.foto = foto;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

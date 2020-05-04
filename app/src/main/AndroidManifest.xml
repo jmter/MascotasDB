@@ -12,17 +12,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".Acercade"
-            android:parentActivityName=".MainActivity"
+            android:name=".Activities.Acercade"
+            android:parentActivityName=".Activities.MainActivity"
             />
         <activity
-            android:name=".Contacto"
-            android:parentActivityName=".MainActivity"
+            android:name=".Activities.Contacto"
+            android:parentActivityName=".Activities.MainActivity"
             />
         <activity
-            android:name=".MascotasFavoritas"
-            android:parentActivityName=".MainActivity" />
-        <activity android:name=".MainActivity">
+            android:name=".Activities.MascotasFavoritas"
+            android:parentActivityName=".Activities.MainActivity" />
+        <activity android:name=".Activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

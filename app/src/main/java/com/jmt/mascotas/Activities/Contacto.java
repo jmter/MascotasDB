@@ -1,4 +1,4 @@
-package com.jmt.mascotas;
+package com.jmt.mascotas.Activities;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,6 +21,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+
+import com.jmt.mascotas.R;
 
 import java.util.Properties;
 
@@ -79,11 +81,10 @@ public class Contacto extends AppCompatActivity {
                 if (sesion != null){
                     Message message = new MimeMessage(sesion);
                     message.setFrom(new InternetAddress(user));
-                    message.setSubject("Facil");
-                    message.setRecipients(Message.RecipientType.TO,InternetAddress.parse("jmter@outlook.com"));
+                    message.setSubject(nombre.getText().toString());
+                    message.setRecipients(Message.RecipientType.TO,InternetAddress.parse(correo.getText().toString()));
                     message.setContent(mensaje.getText().toString(),"text/html; charset=utf-8");
                     Transport.send(message);
-
                     Toast toast3 =
                             Toast.makeText(getApplicationContext(),"Mensaje enviado",Toast.LENGTH_LONG);
                     toast3.show();

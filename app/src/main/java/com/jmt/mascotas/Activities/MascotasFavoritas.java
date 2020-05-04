@@ -1,4 +1,4 @@
-package com.jmt.mascotas;
+package com.jmt.mascotas.Activities;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -6,10 +6,12 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ImageView;
+
+import com.jmt.mascotas.Adapter.MascotaAdaptador;
+import com.jmt.mascotas.POJO.Mascota;
+import com.jmt.mascotas.R;
 
 import java.util.ArrayList;
 
@@ -45,11 +47,11 @@ public class MascotasFavoritas extends AppCompatActivity {
     public void ListaDeMascota() {
         mascota = new ArrayList<Mascota>();
 
-        mascota.add(new Mascota("Pepe","8",R.drawable.mascota2));
-        mascota.add(new Mascota("Gaston","9",R.drawable.mascota4));
-        mascota.add(new Mascota("Raspu","8",R.drawable.mascota6));
-        mascota.add(new Mascota("Juan","10",R.drawable.mascota7));
-        mascota.add(new Mascota("Fabian","10",R.drawable.mascota10));
+        mascota.add(new Mascota(0, "Pepe","8",R.drawable.mascota2));
+        mascota.add(new Mascota(1, "Gaston","9",R.drawable.mascota4));
+        mascota.add(new Mascota(2, "Raspu","8",R.drawable.mascota6));
+        mascota.add(new Mascota(3, "Juan","10",R.drawable.mascota7));
+        mascota.add(new Mascota(4, "Fabian","10",R.drawable.mascota10));
 
 
 
